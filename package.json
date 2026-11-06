@@ -1,0 +1,49 @@
+{
+  "name": "madar-wallet",
+  "version": "0.1.53",
+  "description": "Madar Wallet — non-custodial multi-chain wallet (browser extension)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:android": "vite build --mode android",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "@scure/base": "^2.4.0",
+    "@scure/bip32": "^2.4.0",
+    "@scure/bip39": "^2.4.0",
+    "@scure/btc-signer": "^2.4.1",
+    "@scure/sr25519": "^2.4.0",
+    "@solana-program/system": "^0.15.0",
+    "@solana-program/token": "^0.17.0",
+    "@solana/kit": "^8.4.0",
+    "@ton/core": "0.63.1",
+    "@ton/crypto": "3.3.0",
+    "buffer": "6.0.3",
+    "lightweight-charts": "4.2.3",
+    "lucide-react": "^1.49.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "viem": "^2.57.2"
+  },
+  "devDependencies": {
+    "@emurgo/cardano-serialization-lib-nodejs": "17.0.0",
+    "@ton/ton": "16.3.0",
+    "@types/chrome": "^0.3.4",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.3"
+  },
+  "private": true
+}

@@ -1,0 +1,79 @@
+{
+  "manifest_version": 3,
+  "name": "Madar Wallet",
+  "short_name": "Madar",
+  "version": "0.1.53",
+  "description": "Non-custodial crypto wallet: send, receive, swap and buy crypto across many networks. Your keys stay on your device.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Madar Wallet",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "sidePanel"
+  ],
+  "optional_permissions": [
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://*.publicnode.com/*",
+    "https://*.drpc.org/*",
+    "https://1rpc.io/*",
+    "https://api.coingecko.com/*",
+    "https://mempool.space/*",
+    "https://blockstream.info/*",
+    "https://solana.api.onfinality.io/*",
+    "https://lite-api.jup.ag/*",
+    "https://aggregator-api.kyberswap.com/*",
+    "https://explorer.optimism.io/*",
+    "https://madarwallet.app/*",
+    "https://swap.madarwallet.app/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://madarwallet.app/*",
+        "https://swap.madarwallet.app/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "world": "ISOLATED"
+    },
+    {
+      "matches": [
+        "https://madarwallet.app/*",
+        "https://swap.madarwallet.app/*"
+      ],
+      "js": [
+        "inpage.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "world": "MAIN"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; frame-src https://widget.changelly.com https://s.tradingview.com https://www.tradingview.com; connect-src 'self' https://*.publicnode.com https://*.drpc.org https://1rpc.io https://rpc.blast.io https://api.coingecko.com https://api.hyperliquid.xyz https://api.cow.fi https://mempool.space https://blockstream.info https://solana.api.onfinality.io https://lite-api.jup.ag https://api.jup.ag https://1click.chaindefuser.com https://aggregator-api.kyberswap.com https://swap.madarwallet.app https://explorer.optimism.io https://madarwallet.app https://api.trongrid.io https://api.bitcore.io https://api.blockcypher.com https://litecoinspace.org https://api.blockchair.com https://xrplcluster.com https://rpc.ankr.com https://gateway.liquify.com https://thorchain-thornode-lb-1.thorwallet.org https://api.routescan.io https://mainnet.era.zksync.io https://celo.blockscout.com https://zksync.blockscout.com https://unichain.blockscout.com https://toncenter.com https://tonapi.io https://api.gopluslabs.io https://raw.githubusercontent.com https://rpc.mainnet.fastnear.com https://rpc.mainnet.near.org https://graphql.mainnet.sui.io https://api.mainnet.aptoslabs.com https://fullnode.mainnet.aptoslabs.com https://rest.cosmos.directory https://polkadot-asset-hub-rpc.polkadot.io https://asset-hub-polkadot-rpc.n.dwellir.com"
+  },
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}

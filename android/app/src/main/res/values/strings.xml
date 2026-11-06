@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">محفظة مدار (تجريبي)</string>
+    <string name="saved">تم حفظ الملف</string>
+    <string name="save_failed">تعذر حفظ الملف</string>
+    <string name="allow_install">فعّل «السماح من هذا المصدر» ثم ارجع إلى المحفظة</string>
+    <string name="no_app">لا يوجد تطبيق لفتح هذا الرابط</string>
+</resources>
